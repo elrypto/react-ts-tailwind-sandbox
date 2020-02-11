@@ -1,9 +1,9 @@
 import React from 'react';
-import { UpAndRunning } from './pages/UpAndRunning';
+import { DesigningImageCards } from './pages/DesigningImageCards';
 
 const App = () => {
   return (
-    <UpAndRunning />
+    <DesigningImageCards />
   )
 }
 
