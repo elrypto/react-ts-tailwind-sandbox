@@ -1,6 +1,8 @@
 import React from 'react'
 
-/* allows client to add additional tailwind styles to be appended 
+/*  allows client to add additional tailwind styles (twClasses) to be appended 
+    another option/alternative is to expose some design 
+    system options (sm, lg, xl, blue, grey, etc.)
 */
 interface ButtonProps extends React.HTMLAttributes<HTMLAnchorElement> {
   type?: string;
@@ -18,7 +20,8 @@ const PRIMARY_BUTTON = `${BASE_BUTTON_CLASSES} bg-indigo-500 hover:bg-indigo-400
   active:bg-indigo-600 text-white`;
 
 /* 
-  Passes through children, additional tailwind classes and button props (expecting onClick)
+  Passes through children, additional tailwind classes and 
+  button props (expecting onClick)
 */
 export const Button = ({ children, type, twClasses, ...buttonProps }: ButtonProps) => {
   let buttonClasses = '';
@@ -26,6 +29,10 @@ export const Button = ({ children, type, twClasses, ...buttonProps }: ButtonProp
   switch (type) {
     case "primary":
       buttonClasses = PRIMARY_BUTTON;
+      break;
+    case "secondary":
+      break;
+    case "ghost":
       break;
     default:
       buttonClasses = DEFAULT_BUTTON;

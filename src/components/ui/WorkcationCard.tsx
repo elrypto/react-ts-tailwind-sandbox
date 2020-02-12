@@ -24,7 +24,14 @@ export const WorkcationCard = () => {
               Workcation helps you find work-friendly rentals in beautiful locations so you can enjoy some nice weather even when you're not on vacation.
           </p>
             <div className="mt-4 sm:mt-6">
-              <Button type="primary" twClasses="btn bg-brand-blue shadow-lg sm:text-base">Book your escape</Button>
+              <Button type="primary"
+                twClasses="btn bg-brand-blue shadow-lg sm:text-base"
+                onClick={() => {
+                  console.log('clicked');
+                }}
+              >
+                Book your escape
+              </Button>
             </div>
           </div>
         </div>
