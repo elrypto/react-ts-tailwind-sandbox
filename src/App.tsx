@@ -1,10 +1,8 @@
 import React from 'react';
-import { DesigningImageCards } from './pages/DesigningImageCards';
+import { BuildNavBar } from './pages/BuildNavBar';
 
-const App = () => {
-  return (
-    <DesigningImageCards />
-  )
-}
+const App = () => <BuildNavBar />
+
+
 
 export default App;

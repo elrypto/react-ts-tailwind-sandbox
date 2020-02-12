@@ -18,7 +18,7 @@ export const PropertyCard =
 
     return (
       <div>
-        <div className="relative pb-5/6 rounded-lg">
+        <div className="relative pb-5/6">
           <img className="absolute h-full w-full h-48 w-full object-cover rounded-lg shadow-md" src={imageUrl} alt={imageAlt} />
         </div>
         <div className="relative px-4 -mt-16">
