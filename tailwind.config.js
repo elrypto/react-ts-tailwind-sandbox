@@ -5,7 +5,8 @@ module.exports = {
         'brand-blue': '#1992d4'
       },
       spacing: {
-        '72': '18rem'
+        '72': '18rem',
+        '2/3': '66.666667%',
       }
     },
   },

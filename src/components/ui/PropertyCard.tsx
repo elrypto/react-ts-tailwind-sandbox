@@ -2,6 +2,7 @@ import React from 'react'
 import { AProperty } from './../data/Data';
 import { Property } from '../common/Interfaces';
 import { Stars } from '../common/Stars';
+import { Badge } from '../common/Badge';
 
 export const PropertyCard =
   ({ baths,
@@ -17,12 +18,17 @@ export const PropertyCard =
 
     return (
       <div className="bg-white border rounded-lg overflow-hidden">
-        <img src={imageUrl} alt={imageAlt} />
+        <div className="relative bg-red-500 pb-2/3">
+          <img className="absolute h-full w-full h-48 w-full object-cover" src={imageUrl} alt={imageAlt} />
+        </div>
         <div className="p-6">
-          <div className="text-gray-600 text-xs uppercase font-semibold tracking-wide">
-            {beds} beds &bull; {baths} baths
+          <div className="flex items-baseline">
+            <Badge>New</Badge>
+            <div className="ml-2 text-gray-600 text-xs uppercase font-semibold tracking-wide">
+              {beds} beds &bull; {baths} baths
           </div>
-          <h4 className="font-semibold text-lg leading-tight truncate">{title}</h4>
+          </div>
+          <h4 className="mt-1 font-semibold text-lg leading-tight truncate">{title}</h4>
           <div className="mt-1">
             {formattedPrice}
             <span className="text-gray-600 text-sm">/ wk</span>
