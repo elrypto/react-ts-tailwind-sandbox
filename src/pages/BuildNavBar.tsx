@@ -32,11 +32,26 @@ export const BuildNavBar = () => {
         </div>
       </div>
       {
-        <nav className={isOpen ? 'block px-2 pt-2 pb-4 sm:block' : 'hidden sm:flex sm:p-0'}>
-          <a className="block px-2 py-1 text-white font-semibold rounded hover:bg-gray-800" href="#">List your property</a>
-          <a className="mt-1 block px-2 py-1 text-white font-semibold rounded hover:bg-gray-800 sm:mt-0 sm:ml-2" href="#">Trips</a>
-          <a className="mt-1 block px-2 py-1 text-white font-semibold rounded hover:bg-gray-800 sm:mt-0 sm:ml-2" href="#">Messages</a>
-          <AccountDropDown twClasses="ml-6" />
+        <nav className={isOpen ? 'block sm:block' : 'hidden sm:block'}>
+          <div className="px-2 pt-2 pb-4 sm:flex sm:p-0">
+            <a className="block px-2 py-1 text-white font-semibold rounded hover:bg-gray-800" href="#">List your property</a>
+            <a className="mt-1 block px-2 py-1 text-white font-semibold rounded hover:bg-gray-800 sm:mt-0 sm:ml-2" href="#">Trips</a>
+            <a className="mt-1 block px-2 py-1 text-white font-semibold rounded hover:bg-gray-800 sm:mt-0 sm:ml-2" href="#">Messages</a>
+            <AccountDropDown twClasses="hidden sm:block sm:ml-6" />
+          </div>
+
+          <div className="px-4 py-5 border-t border-gray-800 sm:hidden">
+            <div className="flex items-center">
+              <img className="h-8 w-8 border-2 border-gray-600 rounded-full object-cover" src="https://images.unsplash.com/photo-1487412720507-e7ab37603c6f?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=256&q=80" />
+              <span className="ml-4 font-semibold text-white">Jane Doe</span>
+            </div>
+
+            <div className="mt-4">
+              <a href="#" className="block text-gray-400 hover:text-white">Account settings</a>
+              <a href="#" className="mt-2 block text-gray-400 hover:text-white">Support</a>
+              <a href="#" className="mt-2 block text-gray-400 hover:text-white">Sign out</a>
+            </div>
+          </div>
         </nav>
       }
     </header >
