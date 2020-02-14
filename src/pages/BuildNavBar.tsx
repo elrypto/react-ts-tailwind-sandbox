@@ -5,6 +5,11 @@ import { AccountDropDown } from '../components/common/AccountDropDown';
 export const BuildNavBar = () => {
   const [isOpen, setIsOpen] = useState(false);
 
+  const toggleOpen = () => {
+    setIsOpen(!isOpen);
+  }
+
+
   return (
     <header className="bg-gray-900 sm:flex sm:justify-between sm:items-center sm:p-4 sm:py-3">
       <div className="flex items-center justify-between px-4 py-3 sm:p-0">
@@ -13,7 +18,7 @@ export const BuildNavBar = () => {
         </div>
         <div className="sm:hidden">
           <button
-            onClick={() => { setIsOpen(!isOpen) }}
+            onClick={() => toggleOpen()}
             type="button"
             className="text-gray-500 rounded hover:text-white focus:text-white focus:outline-none">
             <svg className="h-6 w-6 fill-current" viewBox="0 0 24 24">
@@ -34,6 +39,6 @@ export const BuildNavBar = () => {
           <AccountDropDown twClasses="ml-6" />
         </nav>
       }
-    </header>
+    </header >
   )
 }
