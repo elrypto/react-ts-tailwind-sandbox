@@ -1,8 +1,9 @@
 import React from 'react';
-import { Main } from './pages/Main';
+import { BuildNavBar } from './pages/BuildNavBar';
+import { UpAndRunning } from './pages/UpAndRunning';
+import { DropDown } from './pages/DropDown';
 
-
-const App = () => <Main />
+const App = () => <BuildNavBar />
 
 
 
